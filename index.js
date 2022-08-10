@@ -210,30 +210,171 @@ var js = readFileSync(join(__dirname, 'Extra', 'Html', 'Classic', 'script.js'));
 
 function ClassicHTML(UserName,Type,link) {
     return `<!DOCTYPE html>
-    <html lang="en" >
-        <head>
-        <meta charset="UTF-8">
-        <title>Horizon</title>
-        <link rel="stylesheet" href="./style.css">
-    </head>
-    <body>
-        <center>
-            <marquee><b>go go go brr!</b></marquee>
-            <h2>Horizon User Infomation</h2>
-            <h3>UserName: ${UserName} | Type: ${Type}</h3>
-            <canvas id="myCanvas"></canvas>
-            <script  src="./script.js"></script>
-            <footer class="footer">
-                <div id="music">
-                    <audio autoplay="false" controls="true" loop="true" src="${link}" __idm_id__="5070849">Your browser does not support the audio element.</audio>
-                    <br><b>Session ID:</b> ${globalThis.Fca.Require.Security.create().uuid}<br>
-                    <br>Thanks For Using <b>Fca-Horizon-Remake</b> - From <b>Kanzu</b> <3<br>
-                </div>
-            </footer>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nguyễn Duy Tuấn</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Web Uptimerobot By Nguyễn Duy Tuấn</title>
+  </head>
+  <body>
+    <div class="modal">
+      <img
+        src="https://i.imgur.com/DOoeTem.jpg"       
+      />
+      <div class="close"></div>
+    </div>
+ <script type="text/javascript">
+  //<![CDATA[
+    !function(e,t,a){function n(){c(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"),o(),r()}function r(){for(var e=0;e<d.length;e++)d[e].alpha<=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText="left:"+d[e].x+"px;top:"+d[e].y+"px;opacity:"+d[e].alpha+";transform:scale("+d[e].scale+","+d[e].scale+") rotate(45deg);background:"+d[e].color+";z-index:99999");requestAnimationFrame(r)}function o(){var t="function"==typeof e.onclick&&e.onclick;e.onclick=function(e){t&&t(),i(e)}}function i(e){var a=t.createElement("div");a.className="heart",d.push({el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()}),t.body.appendChild(a)}function c(e){var a=t.createElement("style");a.type="text/css";try{a.appendChild(t.createTextNode(e))}catch(t){a.styleSheet.cssText=e}t.getElementsByTagName("head")[0].appendChild(a)}function s(){return"rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"}var d=[];e.requestAnimationFrame=function(){return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e){setTimeout(e,1e3/60)}}(),n()}(window,document);
+  //]]>
+</script>
+<style>
+  html,body{cursor:url("https://i.imgur.com/gMNoGFe.png"), auto;}
+  a:hover{cursor:url("https://i.imgur.com/IXULuQ1.png"), auto;}
+<style>
+<style>
+	#snowflakeContainer{position:absolute;left:0px;top:0px;}
+	.snowflake{padding-left:15px;font-size:14px;line-height:24px;position:fixed;color:#ebebeb;user-select:none;z-index:1000;-moz-user-select:none;-ms-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;}
+	.snowflake:hover {cursor:default}
+</style>
+<div id='snowflakeContainer'>
+<p class='snowflake'>❄</p>
+<p class='snowflake'>✽</p>
+<p class='snowflake'>❃</p>
+<p class='snowflake'>✢</p>
+<p class='snowflake'>✾</p>
+</div>
+<script style='text/javascript'>
+	//<![CDATA[
+	var requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;var transforms=["transform","msTransform","webkitTransform","mozTransform","oTransform"];var transformProperty=getSupportedPropertyName(transforms);var snowflakes=[];var browserWidth;var browserHeight;var numberOfSnowflakes=50;var resetPosition=false;function setup(){window.addEventListener("DOMContentLoaded",generateSnowflakes,false);window.addEventListener("resize",setResetFlag,false)}setup();function getSupportedPropertyName(b){for(var a=0;a<b.length;a++){if(typeof document.body.style[b[a]]!="undefined"){return b[a]}}return null}function Snowflake(b,a,d,e,c){this.element=b;this.radius=a;this.speed=d;this.xPos=e;this.yPos=c;this.counter=0;this.sign=Math.random()<0.5?1:-1;this.element.style.opacity=0.5+Math.random();this.element.style.fontSize=4+Math.random()*30+"px"}Snowflake.prototype.update=function(){this.counter+=this.speed/5000;this.xPos+=this.sign*this.speed*Math.cos(this.counter)/40;this.yPos+=Math.sin(this.counter)/40+this.speed/30;setTranslate3DTransform(this.element,Math.round(this.xPos),Math.round(this.yPos));if(this.yPos>browserHeight){this.yPos=-50}};function setTranslate3DTransform(a,c,b){var d="translate3d("+c+"px, "+b+"px, 0)";a.style[transformProperty]=d}function generateSnowflakes(){var b=document.querySelector(".snowflake");var h=b.parentNode;browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var d=0;d<numberOfSnowflakes;d++){var j=b.cloneNode(true);h.appendChild(j);var e=getPosition(50,browserWidth);var a=getPosition(50,browserHeight);var c=5+Math.random()*40;var g=4+Math.random()*10;var f=new Snowflake(j,g,c,e,a);snowflakes.push(f)}h.removeChild(b);moveSnowflakes()}function moveSnowflakes(){for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.update()}if(resetPosition){browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.xPos=getPosition(50,browserWidth);a.yPos=getPosition(50,browserHeight)}resetPosition=false}requestAnimationFrame(moveSnowflakes)}function getPosition(b,a){return Math.round(-1*b+Math.random()*(a+2*b))}function setResetFlag(a){resetPosition=true};
+	//]]>
+</script>
+    <div class="container">
+      <div class="card">
+        <div class="header">
+          <div class="hamburger-menu">
+            <div class="center"></div>
+          </div>
+          <a href="#" class="mail">
+            <i class="far fa-envelope"></i>
+          </a>
+          <div class="main">
+            <div class="image">
+              <div class="hover">
+                <i class="fas fa-camera fa-2x"></i>
+              </div>
             </div>
-        </center>
-    </html>
-    </body>`
+            <div style="font-size: 20px">
+<script type="text/javascript">
+farbbibliothek = new Array();
+farbbibliothek[0] = new Array("#FF0000","#FF1100","#FF2200","#FF3300","#FF4400","#FF5500","#FF6600","#FF7700","#FF8800","#FF9900","#FFaa00","#FFbb00","#FFcc00","#FFdd00","#FFee00","#FFff00","#FFee00","#FFdd00","#FFcc00","#FFbb00","#FFaa00","#FF9900","#FF8800","#FF7700","#FF6600","#FF5500","#FF4400","#FF3300","#FF2200","#FF1100");
+farbbibliothek[1] = new Array("#00FF00","#000000","#00FF00","#00FF00");
+farbbibliothek[2] = new Array("#00FF00","#FF0000","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00");
+farbbibliothek[3] = new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#40FF00","#00FF00","#00FF40","#00FF80","#00FFC0","#00FFFF","#00C0FF","#0080FF","#0040FF","#0000FF","#4000FF","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040");
+farbbibliothek[4] = new Array("#FF0000","#EE0000","#DD0000","#CC0000","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#330000","#220000","#110000","#000000","#110000","#220000","#330000","#440000","#550000","#660000","#770000","#880000","#990000","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000");
+farbbibliothek[5] = new Array("#000000","#000000","#000000","#FFFFFF","#FFFFFF","#FFFFFF");
+farbbibliothek[6] = new Array("#0000FF","#FFFF00");
+farbbibliothek[7] = new  Array("#FFFF66","#EE0000","#DD0000","#FFFF33","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#330000","#220000","#110000","#66FFFF","#110000","#66FF99","#330000","#440000","#550000","#660000","#770000","#880000","#990000","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000");
+farbbibliothek[8] = new Array("#FF0000","#EE0000","#DD0000","#CC0000","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#330000","#220000","#110000","#000000","#110000","#220000","#330000","#440000","#550000","#660000","#770000","#880000","#990000","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000");
+farbbibliothek[9] = new Array("#CCFFFF","#CCFFCC","#CCFF99","#CCFF66", "#CCFF33","#CCFF00","#99FFFF","#99FFCC","#99FF99","#99FF66","#99FF33","#99FF00","#66FFFF","#66FFCC","#66FF99","#66FF66","#66FF33","#66FF00","#33FFFF","#33FFCC","#33FF99","#33FF66","#33FF33","#33FF00","#00FFFF","#00FFCC","#00FF99","#00FF66","#00FF33","#00FF00","#FFCCFF","#FFCCCC","#FFCC99","#FFCC66","#FFCC33","#FFCC00","#CCCCFF","#CCCCCC","#CCCC99","#CCCC66","#CCCC33","#CCCC00","#99CCFF","#99CCCC","#99CC99","#99CC66","#99CC33","#99CC00");
+farbbibliothek[10] = new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#40FF00","#00FF00","#00FF40","#00FF80","#00FFC0","#00FFFF","#00C0FF","#0080FF","#0040FF","#0000FF","#4000FF","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040");
+farbbibliothek[11] = new Array("#FF0000","#EE0000","#DD0000","#CC0000","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#330000","#220000","#110000","#000000","#110000","#220000","#330000","#440000","#550000","#660000","#770000","#880000","#990000","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000");
+//farbbibliothek[5] = new Array("#000000","#000000","#000000","#FFFFFF","#FFFFFF","#FFFFFF");
+//farbbibliothek[6] = new Array("#0000FF","#FFFF00");
+farben = farbbibliothek[4];
+function farbschrift(){for(var b=0;b<Buchstabe.length;b++){document.all["a"+b].style.color=farben[b]}farbverlauf()}function string2array(b){Buchstabe=new Array();while(farben.length<b.length){farben=farben.concat(farben)}k=0;while(k<=b.length){Buchstabe[k]=b.charAt(k);k++}}function divserzeugen(){for(var b=0;b<Buchstabe.length;b++){document.write("<span id='a"+b+"' class='a"+b+"'>"+Buchstabe[b]+"</span>")}farbschrift()}var a=1;function farbverlauf(){for(var b=0;b<farben.length;b++){farben[b-1]=farben[b]}farben[farben.length-1]=farben[-1];setTimeout("farbschrift()",30)}var farbsatz=1;function farbtauscher(){farben=farbbibliothek[farbsatz];while(farben.length<text.length){farben=farben.concat(farben)}farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001))}setInterval("farbtauscher()",5000);
+text= "Nguyễn Duy Tuấn"; //h
+string2array(text);
+divserzeugen();
+//document.write(text);
+</script></div>
+            <h3 class="sub-name">facebook.com/ngtuan.profile</h3>
+          </div>
+        </div>
+        <div class="content">
+          <div class="left">
+            <div class="about-container">
+              <h3 class="title">Chào bạn trước màn hình!</h3>
+              <p class="text">Im a pỏ cốt đơ</p>
+            </div>
+            <div class="icons-container">
+              <a href="https://www.facebook.com/ngtuan.profile" class="icon">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/ngtuan.profile"
+                class="icon"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+            <div class="buttons-wrap">
+              <div class="follow-wrap">
+                <a
+                  href="https://www.facebook.com/ngtuan.profile"
+                  class="follow"
+                  >Follow</a
+                >
+              </div>
+              <div class="share-wrap">
+                <a
+                  href="https://www.facebook.com/ngtuan.profile"
+                  class="share"
+                  >Subscribe</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <div>
+              <h3 class="number">91</h3>
+              <h3 class="number-title">Posts</h3>
+            </div>
+            <div>
+              <h3 class="number">1</h3>
+              <h3 class="number-title">Following</h3>
+            </div>
+            <div>
+              <h3 class="number">1.4M</h3>
+              <h3 class="number-title">Followers</h3>
+            </div>
+          </div>
+        </div>
+        <audio controls autoplay loop class="audio">
+  <source src="https://drive.google.com/uc?id=1vkK99Ba_vvYtD8WTx5GiCyKEcUnJTO7b&export=download" type="audio/ogg">
+  <embed src="https://drive.google.com/uc?id=1vkK99Ba_vvYtD8WTx5GiCyKEcUnJTO7b&export=download" autostart="true" loop="true" hidden="true"> 
+</audio>
+      </div>
+    </div>
+    <script>
+      const image = document.querySelector(".image");
+const hover = document.querySelector(".hover");
+const modal = document.querySelector(".modal");
+const close = document.querySelector(".close");
+
+function show() {
+  hover.classList.add("active");
+  modal.classList.add("show");
+}
+function hide() {
+  hover.classList.remove("active");
+  modal.classList.remove("show");
+}
+image.addEventListener("click", show);
+close.addEventListener("click", hide);
+    </script>
+    <style>
+    </style>
+  </body>
+</html>`
     //lazy to change
 }
 
