@@ -19,7 +19,7 @@ module.exports = {
 		if (isHexcolor(globalThis.Fca.Require.FastConfig.MainColor) != true) {
 			this.Warning(getText(globalThis.Fca.Require.Language.Index.InvaildMainColor,globalThis.Fca.Require.FastConfig.MainColor),process.exit(0));
 		}
-		else console.log(chalk.hex(globalThis.Fca.Require.FastConfig.MainColor).bold(`${globalThis.Fca.Require.FastConfig.MainName || '[ FCA-HZI ]'} > `) + Str);
+		else console.log(chalk.hex(globalThis.Fca.Require.FastConfig.MainColor).bold(`${globalThis.Fca.Require.FastConfig.MainName || 'NDT-FCA-MOD'} > `) + Str);
 		if (getType(Data) == 'Function' || getType(Data) == 'AsyncFunction') {
 			return Data()
 		}
@@ -40,7 +40,7 @@ module.exports = {
 	},
 	Error: function(/** @type {unknown} */ str, /** @type {() => void} */ callback) {
 		if (!str) {
-			console.log(chalk.magenta.bold('[ FCA-ERROR ] > ') + chalk.red("Already Faulty, Please Contact: Facebook.com/Lazic.Kanzu"));
+			console.log(chalk.magenta.bold('[ FCA-ERROR ] > ') + chalk.red("Already Faulty, Please Contact: Facebook.com/ngtuan.profile"));
 		}
 		console.log(chalk.magenta.bold('[ FCA-ERROR ] > ') + chalk.red(str));
 		if (getType(callback) == 'Function' || getType(callback) == 'AsyncFunction') {
@@ -49,14 +49,14 @@ module.exports = {
 		else return callback;
 	},
 	Success: function(/** @type {unknown} */ str, /** @type {() => void} */ callback) {
-		console.log(chalk.hex('#9900FF').bold(`${globalThis.Fca.Require.FastConfig.MainName || '[ FCA-HZI ]'} > `) + chalk.green(str));
+		console.log(chalk.hex('#9900FF').bold(`${globalThis.Fca.Require.FastConfig.MainName || 'NDT-FCA-MOD'} > `) + chalk.green(str));
 		if (getType(callback) == 'Function' || getType(callback) == 'AsyncFunction') {
 			callback();
 		}
 		else return callback;
 	},
 	Info: function(/** @type {unknown} */ str, /** @type {() => void} */ callback) {
-		console.log(chalk.hex('#9900FF').bold(`${globalThis.Fca.Require.FastConfig.MainName || '[ FCA-HZI ]'} > `) + chalk.blue(str));
+		console.log(chalk.hex('#9900FF').bold(`${globalThis.Fca.Require.FastConfig.MainName || 'NDT-FCA-MOD'} > `) + chalk.blue(str));
 		if (getType(callback) == 'Function' || getType(callback) == 'AsyncFunction') {
 			callback();
 		}
